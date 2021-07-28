@@ -6,19 +6,22 @@ export var lane = 0
 # var a = 2
 # var b = "text"
 
-#func _physics_process(delta):
-#	match lane:
-#		1:
-#			pass
-#		2:
-#			if abs(x)>0.1:
-#
-#			pass
-#		3:
-#			pass
+func _physics_process(delta):
+
+	match lane:
+		1:
+			$MeshInstance.get_active_material(0).albedo_color = ColorN("Blue")
+			pass
+		2:
+			$MeshInstance.get_active_material(0).albedo_color = ColorN("White")
+			pass
+		3:
+			$MeshInstance.get_active_material(0).albedo_color = ColorN("Red")
+			pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
 	pass # Replace with function body.
 
 func _input(event):

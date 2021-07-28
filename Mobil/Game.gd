@@ -30,10 +30,16 @@ func jump_right():
 	pass
 
 func _on_Right_pressed():
+	if lane == 1 or lane == 2:
+		$Ball.lane = lane+1
+		lane = $Ball.lane
 	pass # Replace with function body.
 
 
 func _on_Left_pressed():
+	if lane == 2 or lane == 3:
+		$Ball.lane = lane-1
+		lane = $Ball.lane
 	pass # Replace with function body.
 
 
